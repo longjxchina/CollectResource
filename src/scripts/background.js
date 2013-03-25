@@ -1,11 +1,10 @@
 ﻿// 右键菜单
 chrome.contextMenus.create({ title: "乐趣分享" });
 
-var account;
-
-account = {
-    name: "abcd"
-}
+var account = {
+    name: null,
+    token:null
+};
 
 // 
 function savePage() {
@@ -13,6 +12,11 @@ function savePage() {
         alert("您必须联网才能保存页面！");
         return;
     }
+
+    if (account.token == null) {
+       
+    }
+
     chrome.tabs.executeScript(null, { code: "showSavedData()" });
 }
 
