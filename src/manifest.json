@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "乐趣分享",
+  "version": "0.1",
+  "description": "分享有趣、快乐的事。",
+  "browser_action": {
+    "default_icon": "images/icon.ico"    
+  },  
+  "background":{
+	"scripts": ["scripts/background.js"]
+  },
+  "icons": 
+  { 
+	"16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
+  "permissions":[
+	"contextMenus",
+	"tabs"
+  ],
+  "options_page": "html/options.htm",   
+	"content_scripts": [
+	    {
+	      "matches": [ "http://dynamic.12306.cn/otsweb/*", "https://dynamic.12306.cn/otsweb/*", "https://www.12306.cn/otsweb/*" ],	      
+	      "css": ["css/main.css"],
+	      "js": ["scripts/main.js"],
+	      "all_frames": true
+	    }
+	]
+}
