@@ -106,25 +106,23 @@
     });
 
     function bindEvent() {
-        $("#login-button-link").click(function () {
+        $("#login").click(function () {
             if (login()) {
                 var background = chrome.extension.getBackgroundPage();
-                background.account.token = "mytoken";
+                background.account.token = null;
                 window.close();
             }
         });
     }
 
     function login() {
-        var userName = $("#username-field"),
-            password = $("#password-field"),
-            msgBox = $("#subtext-field"),
+        var userName = $("#txtUserName"),
+            password = $("#txtPassword"),            
             strUserName = $.trim(userName.val()),
             strPassword = $.trim(password.val());
 
-        if (strUserName.length == 0 || strPassword.length == 0) {
-            strUserName.length == 0 ? (userName.focus(), null) : (password.focus(), null);
-            msgBox.html("用户名和密码不能为空，请重新输入！");
+        if (strUserName.length == 0 || strPassword.length == 0) {            
+            strUserName.length == 0 ? (userName.focus(), null) : (password.focus(), null);            
             return false;
         }
 

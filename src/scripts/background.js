@@ -8,7 +8,7 @@ chrome.contextMenus.create({
     title: "乐趣分享",
     onclick: function () {
         if (account.token == null) {
-            window.open("html/login.html", "登录", "width=427,height=367,top=200,left=300");
+            window.open("html/login.html", "登录", "width=325,height=300,top=200,left=300");
         }
     }
 });

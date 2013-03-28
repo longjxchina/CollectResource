@@ -1,28 +1,113 @@
-body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td
-{
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td{
     margin: 0;
     padding: 0;    
-    font:11px "Î¢ÈíÑÅºÚ", Arial, Tahoma;
+    font:11px "å¾®è½¯é›…é»‘", Arial, Tahoma;
 }
 
-li
-{
+li{
     list-style:none;
 }
 
 body {
 	/* This 1 px padding is necessary for the login popup
-		window otherwise  the border would not look good */
-	padding: 1px;
-	width: 425px;
-	height: 365px;
+		window otherwise  the border would not look good */	
+	width: 325px;
+	height: 300px;
+}
+
+a {
+	text-decoration: none;
 }
 
 h1 {
-	font-size: 24px;
-	margin: 20px 0px 15px 0px;
+	font-size: 24px;	
 	text-shadow: 0px 1px 0px #fff;
 }
+
+.outer_container{
+    width:325px;
+    height:300px;    
+    background:url("../images/main-bg.png") no-repeat;
+}
+
+.inner_container{
+    padding:10px 10px 10px 12px;
+}
+
+#header{
+    background:url("../images/header-bg.png") no-repeat;
+}
+
+#header h1{
+    height:50px;
+    line-height:50px;
+    text-align:center;    
+}
+
+#content{
+    height:174px;
+    padding:27px 31px;
+}
+
+.input_container{
+    height:80px;
+    background:url("../images/content-inputbg.png") no-repeat;
+    padding:0 2px;
+}
+
+.input_container li{
+    height:40px;
+    line-height:40px;
+}
+
+#txtUserName, #txtPassword{
+    border:0;
+    padding:8px 2px 8px 30px;
+    width:235px;
+    
+}
+
+#txtUserName{
+    background:url("../images/user-name-bg.png") no-repeat;
+}
+
+#txtPassword{
+    margin-top:4px;
+    background:url("../images/password-bg.png") no-repeat;
+}
+
+.remember_me{
+    height:25px;
+    padding:15px 0 10px;
+}
+
+#rememberMe{
+    display:inline-block;
+    width:23px;
+    height:11px;
+    background:url("../images/remember-me-no.png") no-repeat;
+}
+
+.remember_me #forgetPwd{
+    float:right;
+    cursor:pointer;
+}
+
+#login{
+    height:44px;
+    display:inline-block;
+    width:100%;
+    line-height:44px;
+    background:url("../images/login-bg.png") no-repeat;
+    color:White;
+    font-weight:bold;
+    text-align:center;
+    font-size:16px;
+    cursor:pointer;
+}
+
+/*
+
 
 h2 {
 	font-size: 16px;
@@ -30,9 +115,7 @@ h2 {
 	text-shadow: 0px 1px 0px #fff;
 }
 
-a {
-	text-decoration: none;
-}
+
 
 a:hover, #footer a:hover
 {
@@ -56,21 +139,21 @@ input {
 	-moz-border-radius: 5px;
 	-border-radius: 5px;
 	outline: none;
-}
+}*/
 
 input[type="text"],input[type="password"]
 {
     /*box-shadow:inset 2px 2px 15px #E5E7EA;*/
-    box-shadow:inset 2px 2px 15px #E7F0F0
+    /*box-shadow:inset 2px 2px 15px #E7F0F0*/
 }
-
+/*
 input[type="text"]:focus,input[type="password"]:focus
 {
     border:0;
     box-shadow:0 0 10px #25578C;
 }
-
-/* header */
+*/
+/* header 
 
 #header {
 	height: 45px;
@@ -88,9 +171,9 @@ input[type="text"]:focus,input[type="password"]:focus
 	margin-right: 20px;
 	font-size: 13px;
 	color: #000;
-}
+}*/
 
-/* content */
+/* content 
 h1.login_title
 {
     margin-top:0;
@@ -147,9 +230,9 @@ h1.login_title
 #subtext-field.error{
 	color: #EF4056;
 	font-weight: bold;
-}
+}*/
 
-/* footer */
+/* footer 
 
 #footer {
 	text-align: center;
@@ -159,9 +242,9 @@ h1.login_title
 #footer a {
 	font-size: 12px;
 	color: #000000;
-}
+}*/
 
-/* elements */
+/* elements 
 .button
 {
 	display: inline-block;	
@@ -181,7 +264,7 @@ h1.login_title
 {
     color:White;
     background:-webkit-linear-gradient(#073970, #3E70A4);	
-}
+}*/
 
 .button.red
 {
@@ -194,6 +277,7 @@ h1.login_title
 	/*background: linear-gradient(top, rgba(244,133,135,1) 0%,rgba(240,94,97,1) 8%,rgba(189,66,75,1) 94%,rgba(177,60,63,1) 100%); /* W3C */
 	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f48587', endColorstr='#b13c3f',GradientType=0 ); /* IE6-9 */	
 }
+/*
 .button.red:hover
 {
 	text-decoration: none;	
@@ -202,4 +286,4 @@ h1.login_title
 #subtext-field
 {
     height:1em;
-}
+}*/
