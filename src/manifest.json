@@ -3,12 +3,17 @@
   "name": "乐趣分享",
   "version": "0.1",
   "description": "分享有趣、快乐的事。",
+  "options_page": "html/options.html",
   "browser_action": {
     "default_icon": "images/icon.ico",
 	"default_popup":"html/login.html"
   },  
-  "background":{
-	"scripts": ["scripts/background.js"]
+  "background":{	
+	"scripts": [
+		"scripts/jquery-1.9.1.min.js",
+		"scripts/background.js", 
+		"scripts/main.js"
+	]
   },
   "icons": 
   { 

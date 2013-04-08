@@ -10,6 +10,9 @@ chrome.contextMenus.create({
         if (account.token == null) {
             window.open("html/login.html", "登录", "width=325,height=300,top=200,left=300");
         }
+        else {
+            a();
+        }
     }
 });
 

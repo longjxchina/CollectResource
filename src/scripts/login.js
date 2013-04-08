@@ -109,7 +109,8 @@
         $("#login").click(function () {
             if (login()) {
                 var background = chrome.extension.getBackgroundPage();
-                background.account.token = null;
+
+                background.account.token = "loginin";
                 window.close();
             }
         });
