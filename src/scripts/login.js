@@ -114,16 +114,26 @@
                 window.close();
             }
         });
+
+        $("#rememberMe img").click(function () {            
+            if (this.status == "1") {
+                this.status = "0";
+                this.src = "../images/switch-off.png";
+            } else {
+                this.status = "1";
+                this.src = "../images/switch-on.png";
+            }
+        });
     }
 
     function login() {
         var userName = $("#txtUserName"),
-            password = $("#txtPassword"),            
+            password = $("#txtPassword"),
             strUserName = $.trim(userName.val()),
             strPassword = $.trim(password.val());
 
-        if (strUserName.length == 0 || strPassword.length == 0) {            
-            strUserName.length == 0 ? (userName.focus(), null) : (password.focus(), null);            
+        if (strUserName.length == 0 || strPassword.length == 0) {
+            strUserName.length == 0 ? (userName.focus(), null) : (password.focus(), null);
             return false;
         }
 

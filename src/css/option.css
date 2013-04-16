@@ -1,4 +1,9 @@
-﻿body {
+﻿*{
+    padding:0;
+    margin:0;
+}
+
+body {
 	font-family: ProximaNova, Helvetica, Arial, "Lucida Grande", sans-serif;
 	background-color: #f0f0f0;
 	font-size: 14px;
@@ -18,7 +23,7 @@ a {
 }
 
 a:hover {
-	color: #F3BC00;;
+	color: #F3BC00;
 }
 
 label {
@@ -29,6 +34,9 @@ label {
 	clear: both;
 }
 
+.hide{
+    display:none;
+}
 /* header */
 
 #header {
@@ -232,7 +240,7 @@ label {
 #ril-topics li:hover a {
 	color: #50bbb5;
 }
-
+/*
 .ril-iphone {
 	background-image: url(../img/iphone.png);
 }
@@ -255,7 +263,7 @@ label {
 
 .ril-iphone-ipad {
 	background-image: url(../img/iphone-ipad.png);
-}
+}*/
 
 @media
   (min--moz-device-pixel-ratio: 2),

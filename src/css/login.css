@@ -84,8 +84,12 @@ h1 {
 #rememberMe{
     display:inline-block;
     width:23px;
-    height:11px;
-    background:url("../images/remember-me-no.png") no-repeat;
+    height:11px;    
+}
+
+#rememberMe img{
+    width:35px;
+    height:15px;
 }
 
 .remember_me #forgetPwd{
@@ -104,6 +108,12 @@ h1 {
     text-align:center;
     font-size:16px;
     cursor:pointer;
+}
+
+.register{
+    height:25px;
+    line-height:25px;
+    text-align:center;
 }
 
 /*

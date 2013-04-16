@@ -1,1 +1,0 @@
-del "C:\Documents and Settings\Administrator\Cookies\*.*" /Q
