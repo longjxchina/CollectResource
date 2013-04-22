@@ -6,12 +6,13 @@
 // 右键菜单
 chrome.contextMenus.create({
     title: "乐趣分享",
-    onclick: function () {
+    contexts: ["page", "frame", "editable", "image", "video", "audio", "link", "selection"],
+    onclick: function (info, tab) {
         if (account.token == null) {
             window.open("html/login.html", "登录", "width=325,height=300,top=200,left=300");
         }
         else {
-            a();
+            chrome.tabs.sendRequest(tab.id, {info: info, tab: tab});
         }
     }
 });

@@ -12,7 +12,7 @@
 	"scripts": [
 		"scripts/jquery-1.9.1.min.js",
 		"scripts/background.js", 
-		"scripts/main.js"
+		"scripts/main.js"		
 	]
   },
   "icons": {   
@@ -28,7 +28,10 @@
     {
       "matches": [ "http://*/*","https://*/*"],
       "css": ["css/main.css"],
-      "js": ["scripts/main.js"],
+      "js": [
+		"scripts/main.js",
+		"scripts/Collect.js"
+	  ],
       "all_frames": true
     }
 ]
