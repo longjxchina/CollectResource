@@ -9,10 +9,12 @@ chrome.contextMenus.create({
     contexts: ["page", "frame", "editable", "image", "video", "audio", "link", "selection"],
     onclick: function (info, tab) {
         if (account.token == null) {
+            window.tab = tab;
+            console.log(window.location.href);
             window.open("html/login.html", "登录", "width=325,height=300,top=200,left=300");
         }
         else {
-            chrome.tabs.sendRequest(tab.id, {info: info, tab: tab});
+            chrome.tabs.sendRequest(tab.id, { info: info, tab: tab });
         }
     }
 });

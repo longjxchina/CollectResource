@@ -111,11 +111,13 @@
                 var background = chrome.extension.getBackgroundPage();
 
                 background.account.token = "loginin";
+                var tab = window.opener.tab;
+                chrome.tabs.sendRequest(tab.id, null);
                 window.close();
             }
         });
 
-        $("#rememberMe img").click(function () {            
+        $("#rememberMe img").click(function () {
             if (this.status == "1") {
                 this.status = "0";
                 this.src = "../images/switch-off.png";
