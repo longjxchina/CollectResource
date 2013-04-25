@@ -112,7 +112,7 @@
 
                 background.account.token = "loginin";
                 var tab = window.opener.tab;
-                chrome.tabs.sendRequest(tab.id, null);
+                chrome.tabs.sendRequest(tab.id, {});
                 window.close();
             }
         });
