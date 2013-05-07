@@ -22,18 +22,20 @@
   },
   "permissions":[
 	"contextMenus",
-	"tabs"
+	"tabs",
+	"http://*/*", 
+	"https://*/*"
   ],
   "content_scripts": [
-    {
-      "matches": [ "http://*/*","https://*/*"],
-      "css": ["css/main.css"],
-      "js": [
-		"scripts/jquery-1.9.1.min.js",
-		"scripts/main.js",
-		"scripts/Collect.js"
-	  ],
-      "all_frames": true
-    }
-]
+		{
+		  "matches": [ "http://*/*","https://*/*"],
+		  "css": ["css/main.css"],
+		  "js": [
+			"scripts/jquery-1.9.1.min.js",
+			"scripts/main.js",
+			"scripts/Collect.js"
+		  ],
+		  "all_frames": true
+		}
+	]
 }

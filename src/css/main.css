@@ -1,12 +1,9 @@
-﻿*{
-    font-family:微软雅黑;
-} 
-
-.hide{
+﻿.hide{
     display:none!important;
 }
            
 #HS_BM_OVERLAY{
+    font-family:微软雅黑;
     visibility:hidden;
     position:fixed;
     top:0px !important;

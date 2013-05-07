@@ -111,9 +111,12 @@
                 var background = chrome.extension.getBackgroundPage();
 
                 background.account.token = "loginin";
-                var tab = window.opener.tab;
-                chrome.tabs.sendRequest(tab.id, {});
-                window.close();
+
+                chrome.tabs.getSelected(null, function (tab) {
+                    chrome.browserAction.setPopup({ popup: "" });
+                    background.contentScriptDoCollect();
+                    window.close();
+                });
             }
         });
 

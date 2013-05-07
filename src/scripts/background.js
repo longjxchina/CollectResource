@@ -1,4 +1,10 @@
-﻿var account = {
+﻿/*
+    permission:
+	    "chrome-extension:\/\/*\/*"
+	    "chrome-devtools:\/\/*\/*"
+*/
+
+var account = {
     name: null,
     token:null
 };
@@ -9,8 +15,7 @@ chrome.contextMenus.create({
     contexts: ["page", "frame", "editable", "image", "video", "audio", "link", "selection"],
     onclick: function (info, tab) {
         if (account.token == null) {
-            window.tab = tab;
-            console.log(window.location.href);
+            window.tab = tab;            
             window.open("html/login.html", "登录", "width=325,height=300,top=200,left=300");
         }
         else {
@@ -26,11 +31,22 @@ function savePage() {
         return;
     }
 
-    if (account.token == null) {
-       
+    // 如果当前用户已经登录，设置popup为空，执行收集事件
+    if (account.token != null) {
+        chrome.browserAction.setPopup({
+            popup:""
+        });
     }
 
-    chrome.tabs.executeScript(null, { code: "showSavedData()" });
+    contentScriptDoCollect(); 
+}
+
+function contentScriptDoCollect() {
+//    chrome.tabs.getSelected(null, function (tab) {
+//        console.log("browser clicked：" + tab.url);
+//        chrome.tabs.sendRequest(tab.id, {});
+    //    });    
+    chrome.tabs.executeScript(null, { code: "doCollect()" }); 
 }
 
 chrome.browserAction.onClicked.addListener(savePage);
