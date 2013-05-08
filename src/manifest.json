@@ -11,8 +11,7 @@
   "background":{	
 	"scripts": [
 		"scripts/jquery-1.9.1.min.js",
-		"scripts/background.js", 
-		"scripts/main.js"		
+		"scripts/background.js"			
 	]
   },
   "icons": {   
@@ -31,9 +30,9 @@
 		  "matches": [ "http://*/*","https://*/*"],
 		  "css": ["css/main.css"],
 		  "js": [
-			"scripts/jquery-1.9.1.min.js",
-			"scripts/main.js",
-			"scripts/Collect.js"
+			"scripts/jquery-1.9.1.min.js",			
+			"scripts/Collect.js",
+			"scripts/main.js"
 		  ],
 		  "all_frames": true
 		}

@@ -1,14 +1,4 @@
-﻿chrome.extension.onRequest.addListener(function (request, sender, sendResponse) {
-    doCollect();
-});
-
-function doCollect() {
-    var collect = new Collect(window.location.hostname);
-
-    collect.send();
-}
-
-function Collect(host) {    
+﻿function Collect(host) {    
     this.selector;
     this.host = host;
     this.showOperateTimer = null;
